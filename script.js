@@ -11,5 +11,11 @@ for(let i=0;i<gridSize*gridSize;i++){
 
 gridContainer.setAttribute('style',`grid-template-columns:repeat(${gridSize},auto)`)
 
+let gridBoxList = document.querySelectorAll(".gridItem")
+gridBoxList.forEach((item) =>{
+    item.addEventListener('mouseover',() => {
+        item.classList.add("darkened")
+    })
+})
 
 

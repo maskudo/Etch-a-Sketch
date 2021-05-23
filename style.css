@@ -29,3 +29,6 @@ body{
 .gridItem:hover{
     background-color: black;
 }
+.darkened{
+    background-color: black;
+}
