@@ -26,15 +26,15 @@ button{
 }
 .gridItem{
     border-style: solid;
-    border-width: 2px;
+    border-width: 1px;
     border-color: grey;
-    border-radius: 2px;
+    border-radius: 1px;
     background-color: white;
 
 }
 .gridItem:hover{
     background-color: black;
 }
-.darkened{
+/* .darkened{
     background-color: black;
-}
+} */
