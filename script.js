@@ -18,7 +18,7 @@ function activateEffect(){
         item.addEventListener('mouseover',() => {
             //item.classList.add("darkened")
             let color = genRanHex()
-            item.setAttribute("style",`background-color:${color}`)
+            item.style.backgroundColor = color
         })
     })
 }
@@ -30,12 +30,12 @@ function createGrid(size){
         box[i].setAttribute('class','gridItem')
         gridContainer.append(box[i])
     }
-    gridContainer.setAttribute('style',`grid-template-columns:repeat(${size},auto)`)
+    gridContainer.style.gridTemplateColumns = `repeat(${size},auto)`
     activateEffect()
 }
 
-function removeGrid(size){
-    for(let i=0;i<size*size;i++){
+function removeGrid(){
+    for(let i=0;i<gridSize*gridSize;i++){
         gridContainer.removeChild(box[i])
     }
 }
@@ -47,13 +47,13 @@ changeSize.addEventListener('click',()=>{
     if(value==null||value<=0||value>50){
         value=gridSize
     }
-    removeGrid(gridSize)
+    removeGrid()
     createGrid(value)
 })
 
 const clear = document.querySelector("#clear")
 clear.addEventListener('click',() => {
-    removeGrid(gridSize)
+    removeGrid()
     createGrid(gridSize)
 })
 
